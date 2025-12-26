@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Field_Type__c</fullName>
+    <label>Field Type</label>
+    <type>Picklist</type>
+    <required>false</required>
+    <externalId>false</externalId>
+    <trackHistory>false</trackHistory>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value><fullName>Text</fullName><default>true</default><label>Text</label></value>
+            <value><fullName>Number</fullName><default>false</default><label>Number</label></value>
+            <value><fullName>Date</fullName><default>false</default><label>Date</label></value>
+            <value><fullName>Picklist</fullName><default>false</default><label>Picklist</label></value>
+            <value><fullName>Multi-select</fullName><default>false</default><label>Multi-select</label></value>
+            <value><fullName>Lookup</fullName><default>false</default><label>Lookup</label></value>
+            <value><fullName>GPS</fullName><default>false</default><label>GPS</label></value>
+            <value><fullName>Photo</fullName><default>false</default><label>Photo</label></value>
+            <value><fullName>Signature</fullName><default>false</default><label>Signature</label></value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

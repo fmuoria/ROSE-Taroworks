@@ -1,0 +1,11 @@
+{
+  "name": "rose-taroworks",
+  "version": "1.0.0",
+  "description": "Salesforce-native offline mobile data collection system for ROSE nonprofit",
+  "scripts": {
+    "test": "echo \"No tests configured\" && exit 0"
+  },
+  "devDependencies": {
+    "@salesforce/cli": "^2.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROSE_Field_User__c</fullName>
+    <label>Field User</label>
+    <referenceTo>ROSE_Field_User__c</referenceTo>
+    <relationshipLabel>Sync Logs</relationshipLabel>
+    <relationshipName>Sync_Logs</relationshipName>
+    <type>Lookup</type>
+    <required>false</required>
+    <externalId>false</externalId>
+    <trackHistory>false</trackHistory>
+    <deleteConstraint>SetNull</deleteConstraint>
+</CustomField>

@@ -1,0 +1,13 @@
+{
+  "orgName": "ROSE Taroworks",
+  "edition": "Developer",
+  "features": ["Communities", "ServiceCloud", "API"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": true
+    }
+  }
+}
