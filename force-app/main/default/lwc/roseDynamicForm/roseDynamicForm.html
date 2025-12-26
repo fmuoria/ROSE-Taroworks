@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title={formTitle} icon-name="standard:form">
+        <div class="slds-p-around_medium">
+            <template if:true={formFields}>
+                <lightning-record-edit-form object-api-name="Contact" onsubmit={handleSubmit}>
+                    <template for:each={visibleFields} for:item="field">
+                        <div key={field.id} class="slds-m-bottom_medium">
+                            <lightning-input-field 
+                                field-name={field.fieldApiName}
+                                required={field.required}
+                                value={field.value}>
+                            </lightning-input-field>
+                        </div>
+                    </template>
+                    <lightning-button variant="brand" type="submit" label="Submit"></lightning-button>
+                </lightning-record-edit-form>
+            </template>
+        </div>
+    </lightning-card>
+</template>

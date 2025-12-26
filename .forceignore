@@ -1,0 +1,48 @@
+# LWC configuration files
+.sfdx/
+.localdevserver/
+.sf/
+.vscode/
+
+# Package directories
+**/package.json
+node_modules/
+**/package-lock.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+*~
+
+# Test files
+**/*.test.js
+**/__tests__/
+
+# Coverage files
+coverage/
+.nyc_output/
+
+# IDEs
+.classpath
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+.idea/
+
+# Temp files
+*.tmp
+*.swp
+*.swo
+
+# Build artifacts
+build/
+dist/
+
+# Metadata API
+destructiveChanges.xml

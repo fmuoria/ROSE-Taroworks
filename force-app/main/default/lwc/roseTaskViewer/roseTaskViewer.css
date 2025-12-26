@@ -1,0 +1,16 @@
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.task-item {
+    border: 1px solid #dddbda;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.task-item:hover {
+    background-color: #f3f2f2;
+}
