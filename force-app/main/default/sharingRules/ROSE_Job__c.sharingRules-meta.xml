@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_Jobs_with_Assigned_Field_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share jobs with the field user they are assigned to</description>
+        <label>Share Jobs with Assigned Field User</label>
+        <sharedTo>
+            <allInternalUsers>false</allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>Assigned_User__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <booleanFilter>1</booleanFilter>
+    </sharingCriteriaRules>
+</SharingRules>

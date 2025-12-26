@@ -1,0 +1,53 @@
+.status-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-text {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.status-online {
+    --slds-c-icon-color-foreground-default: #04844b;
+}
+
+.status-offline {
+    --slds-c-icon-color-foreground-default: #c23934;
+}
+
+.sync-info {
+    background: #f3f2f2;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.info-row:not(:last-child) {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.info-label {
+    font-size: 0.875rem;
+    color: #706e6b;
+}
+
+.info-value {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #080707;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Content_Version__c</fullName>
+    <label>Content Version</label>
+    <referenceTo>ContentVersion</referenceTo>
+    <relationshipLabel>Media Attachments</relationshipLabel>
+    <relationshipName>Media_Attachments</relationshipName>
+    <type>Lookup</type>
+    <required>false</required>
+    <externalId>false</externalId>
+    <trackHistory>false</trackHistory>
+    <deleteConstraint>SetNull</deleteConstraint>
+</CustomField>

@@ -1,0 +1,15 @@
+# LWC Jest tests
+**/__tests__/**
+
+# LWC configuration files
+**/jsconfig.json
+
+# Scratch org definitions
+config/**
+
+# Node
+node_modules/
+npm-debug.log
+
+# Logs
+*.log

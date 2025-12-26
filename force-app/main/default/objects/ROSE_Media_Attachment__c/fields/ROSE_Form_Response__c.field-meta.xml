@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROSE_Form_Response__c</fullName>
+    <label>Form Response</label>
+    <referenceTo>ROSE_Form_Response__c</referenceTo>
+    <relationshipLabel>Media Attachments</relationshipLabel>
+    <relationshipName>Media_Attachments</relationshipName>
+    <type>Lookup</type>
+    <required>false</required>
+    <externalId>false</externalId>
+    <trackHistory>false</trackHistory>
+    <deleteConstraint>SetNull</deleteConstraint>
+</CustomField>
