@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Tasks" icon-name="standard:task">
+        <div class="slds-p-around_medium">
+            <template if:true={loading}>
+                <lightning-spinner alternative-text="Loading tasks"></lightning-spinner>
+            </template>
+            
+            <template if:false={loading}>
+                <template if:true={hasTasks}>
+                    <div class="task-list">
+                        <template for:each={tasks} for:item="task">
+                            <div key={task.id} class="task-item" onclick={handleTaskClick} data-task-id={task.id}>
+                                <h3>{task.name}</h3>
+                                <p>Type: {task.taskType}</p>
+                                <p>Status: {task.status}</p>
+                                <lightning-badge label={task.status}></lightning-badge>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

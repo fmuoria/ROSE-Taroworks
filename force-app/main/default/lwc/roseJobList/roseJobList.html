@@ -1,0 +1,61 @@
+<template>
+    <lightning-card title="My Jobs" icon-name="standard:work_order">
+        <!-- Filter buttons -->
+        <div slot="actions">
+            <lightning-button-group>
+                <lightning-button 
+                    label="All" 
+                    onclick={handleFilterAll}
+                    variant={allVariant}>
+                </lightning-button>
+                <lightning-button 
+                    label="New" 
+                    onclick={handleFilterNew}
+                    variant={newVariant}>
+                </lightning-button>
+                <lightning-button 
+                    label="In Progress" 
+                    onclick={handleFilterInProgress}
+                    variant={inProgressVariant}>
+                </lightning-button>
+            </lightning-button-group>
+        </div>
+
+        <!-- Jobs list -->
+        <div class="slds-p-around_medium">
+            <template if:true={loading}>
+                <lightning-spinner alternative-text="Loading jobs"></lightning-spinner>
+            </template>
+
+            <template if:false={loading}>
+                <template if:true={hasJobs}>
+                    <div class="job-list">
+                        <template for:each={filteredJobs} for:item="job">
+                            <div key={job.id} class="job-card" onclick={handleJobClick} data-job-id={job.id}>
+                                <div class="job-header">
+                                    <h3 class="slds-text-heading_small">{job.name}</h3>
+                                    <lightning-badge label={job.priority} class={job.priorityClass}></lightning-badge>
+                                </div>
+                                <div class="job-details">
+                                    <p class="slds-text-body_small">Due: {job.dueDate}</p>
+                                    <p class="slds-text-body_small">Status: {job.status}</p>
+                                    <p class="slds-text-body_small">Region: {job.region}</p>
+                                </div>
+                                <div class="job-progress">
+                                    <lightning-progress-bar value={job.progressPercent}></lightning-progress-bar>
+                                    <p class="slds-text-body_small">{job.completedTasks} of {job.totalTasks} tasks completed</p>
+                                </div>
+                            </div>
+                        </template>
+                    </div>
+                </template>
+
+                <template if:false={hasJobs}>
+                    <div class="slds-text-align_center slds-p-vertical_large">
+                        <p class="slds-text-body_regular">No jobs assigned</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

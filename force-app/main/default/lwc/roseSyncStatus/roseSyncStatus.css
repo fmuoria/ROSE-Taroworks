@@ -1,0 +1,25 @@
+.status-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.status-text.online {
+    color: #2e844a;
+}
+
+.status-text.offline {
+    color: #c23934;
+}
+
+.pending-items {
+    background-color: #fef7e6;
+    padding: 0.5rem;
+    border-left: 3px solid #fe9339;
+    border-radius: 0.25rem;
+}
