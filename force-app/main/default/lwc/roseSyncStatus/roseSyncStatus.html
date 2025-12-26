@@ -1,0 +1,71 @@
+<template>
+    <lightning-card title="Sync Status" icon-name="utility:sync">
+        <div class="slds-p-around_medium">
+            <!-- Online/Offline Status -->
+            <div class="status-row">
+                <div class="status-indicator">
+                    <lightning-icon 
+                        icon-name={onlineStatusIcon} 
+                        size="small"
+                        class={onlineStatusClass}
+                    ></lightning-icon>
+                    <span class="status-text">{onlineStatusText}</span>
+                </div>
+                
+                <template if:true={showSyncButton}>
+                    <lightning-button
+                        label="Sync Now"
+                        onclick={handleManualSync}
+                        variant="brand"
+                        icon-name="utility:sync"
+                    ></lightning-button>
+                </template>
+            </div>
+            
+            <!-- Sync Progress -->
+            <template if:true={isSyncing}>
+                <div class="slds-m-top_medium">
+                    <lightning-spinner 
+                        alternative-text="Syncing data..." 
+                        size="small"
+                    ></lightning-spinner>
+                    <p class="slds-text-align_center slds-m-top_small">Syncing...</p>
+                </div>
+            </template>
+            
+            <!-- Success Message -->
+            <template if:true={syncSuccess}>
+                <div class="slds-notify slds-notify_toast slds-theme_success slds-m-top_medium" role="status">
+                    <span class="slds-assistive-text">Success</span>
+                    <lightning-icon icon-name="utility:success" size="small" variant="inverse"></lightning-icon>
+                    <div class="slds-notify__content">
+                        <h2 class="slds-text-heading_small">Sync completed successfully</h2>
+                    </div>
+                </div>
+            </template>
+            
+            <!-- Error Message -->
+            <template if:true={syncError}>
+                <div class="slds-notify slds-notify_alert slds-alert_error slds-m-top_medium" role="alert">
+                    <lightning-icon icon-name="utility:error" size="small" variant="inverse"></lightning-icon>
+                    <h2>{syncError}</h2>
+                </div>
+            </template>
+            
+            <!-- Sync Info -->
+            <div class="sync-info slds-m-top_medium">
+                <div class="info-row">
+                    <span class="info-label">Last Sync:</span>
+                    <span class="info-value">{lastSyncFormatted}</span>
+                </div>
+                
+                <div class="info-row">
+                    <span class="info-label">Pending Upload:</span>
+                    <span class="info-value">
+                        <lightning-badge label={pendingCount}></lightning-badge>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>
