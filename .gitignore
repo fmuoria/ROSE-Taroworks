@@ -1,0 +1,42 @@
+# Salesforce
+.sfdx/
+.localdevserver/
+.sf/
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Logs
+logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+*~
+
+# IDEs
+.classpath
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+.idea/
+*.iml
+
+# Temp
+*.tmp
+*.swp
+*.swo
+/tmp/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Build
+build/
+dist/
